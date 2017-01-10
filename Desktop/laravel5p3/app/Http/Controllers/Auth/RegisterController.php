@@ -71,7 +71,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
-        // se inserta manualmente los campos username y role por seguridad. ya que estos pueden ser cargados desde el navegador
+        // se insertan manualmente los campos username y role por seguridad. ya que estos pueden ser cargados desde el navegador
         $username = $user->email;
         $username = explode('@',$username);
         $user->username = $username[0];

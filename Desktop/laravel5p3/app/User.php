@@ -28,6 +28,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function socialAccount()
+    {
+        return $this->belongsTo(SocialAccount::class);
+    }
+
     public function getNameAttribute()
     {
         return $this->first_name.' '.$this->last_name;

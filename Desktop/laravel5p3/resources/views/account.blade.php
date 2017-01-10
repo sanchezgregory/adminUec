@@ -6,12 +6,14 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">ACCOUNT</div>
+                @include('partials/errors')
+                @include('partials/success')
 
                 <div class="panel-body">
-                    perfil del usuario
+                    Perfil del usuario
                     <ul>
-                        <li>Crear perfil</li>
-                        <li>Cambiar password</li>
+                        <li><a href=" {{ route('editProfile') }}">Editar perfil</a></li>
+                        <li><a href="{{ route('changePassword') }}">Cambiar password</a></li>
                     </ul>
                 </div>
             </div>

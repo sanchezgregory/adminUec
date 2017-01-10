@@ -5,12 +5,15 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">@lang('auth.login_title')</div>
+                <div class="panel-heading">@lang('auth.login_title')
+
+                    <div class="pull-right"> <a href="redirect" title="Login"><i class="fa fa-facebook-official fa-2x"></i></a></div>
+                </div>
                 <div class="panel-body">
                     @include('partials/errors')
                     @include('partials/success')
 
-                    <a href="redirect">FB Login</a>
+
 
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}

@@ -10,6 +10,9 @@
 
                     <div class="panel-body">
                         LOGIN PARA ENTRAR
+                        <p>
+                            @include('components.share', ['url' => 'http://blog.damirmiladinov.com/'])
+                        </p>
                     </div>
                 </div>
                 <div class="links">

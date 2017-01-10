@@ -1,5 +1,7 @@
 <?php
 
+use App\User;
+
 abstract class TestCase extends Illuminate\Foundation\Testing\TestCase
 {
     /**
@@ -22,4 +24,19 @@ abstract class TestCase extends Illuminate\Foundation\Testing\TestCase
 
         return $app;
     }
+
+    public function createUser($role)
+    {
+        return factory(User::class)->create([
+            'first_name' => 'Gregory',
+            'last_name' => 'Sanchez',
+            'username' => 'mcgregox',
+            'email' => 'mcgregox@gmail.com',
+            'role' => $role,
+            'active' => true,
+            'password' => bcrypt('123456')
+        ]);
+    }
+
+
 }

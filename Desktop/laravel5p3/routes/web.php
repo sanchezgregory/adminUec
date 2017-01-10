@@ -57,6 +57,12 @@ Route::group(['middleware' => 'auth'], function () {
         return view('account');
     });
 
+    Route::get('account/password', 'AccountController@getPassword')->name('changePassword');
+    Route::post('account/password', 'AccountController@postPassword')->name('postPassword');
+
+    Route::get('account/edit-profile', 'AccountController@EditProfile')->name('editProfile');
+    Route::put('account/edit-profile', 'AccountController@UpdateProfile')->name('updateProfile');
+
     Route::group(['middleware' => 'verified'], function() {
 
         Route::get('publish', function() {
